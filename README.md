@@ -17,9 +17,11 @@ REST API for client management built with Spring Boot.
 
 ## Como rodar o projeto
 
-```bash
-mvn spring-boot:run
-```
+# Windows
+mvnw.cmd spring-boot:run
+
+# Linux/Mac
+./mvnw spring-boot:run
 
 A API estará disponível em:
 
