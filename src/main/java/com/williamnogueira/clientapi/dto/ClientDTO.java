@@ -1,5 +1,6 @@
 package com.williamnogueira.clientapi.dto;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.williamnogueira.clientapi.entities.Client;
 
 import java.time.LocalDate;
