@@ -1,17 +1,30 @@
 package com.williamnogueira.clientapi.dto;
 
-import com.fasterxml.jackson.annotation.JsonCreator;
 import com.williamnogueira.clientapi.entities.Client;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.PastOrPresent;
+import jakarta.validation.constraints.Positive;
 
 import java.time.LocalDate;
 
 public class ClientDTO {
 
     private Long id;
+
+    @NotBlank(message = "Campo requerido")
     private String name;
+
+    @NotBlank(message = "CPF não pode ser vazio")
     private String cpf;
+
+    @NotNull(message = "A renda não pode ser nula")
+    @Positive(message = "A renda deve ser positiva")
     private Double income;
+
+    @PastOrPresent(message = "A data não pode ser futura")
     private LocalDate birthDate;
+
     private Integer children;
 
     public ClientDTO() {
