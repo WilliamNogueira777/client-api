@@ -6,7 +6,6 @@ import com.williamnogueira.clientapi.repositories.ClientRepository;
 import com.williamnogueira.clientapi.services.exceptions.DatabaseException;
 import com.williamnogueira.clientapi.services.exceptions.ResourceNotFoundException;
 import jakarta.persistence.EntityNotFoundException;
-import org.hibernate.ObjectNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.data.domain.Page;
@@ -14,9 +13,6 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
-import tools.jackson.databind.exc.InvalidDefinitionException;
-
-import java.util.List;
 
 
 @Service
